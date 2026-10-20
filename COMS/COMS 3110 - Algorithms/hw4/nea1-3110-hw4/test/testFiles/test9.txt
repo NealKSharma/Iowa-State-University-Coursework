@@ -1,0 +1,15 @@
+6
+Ancient1
+Ancient2
+Medieval1
+Medieval2
+Modern1
+Modern2
+3
+Ancient1 Ancient2
+Medieval1 Medieval2
+Modern1 Modern2
+3
+Ancient1 Medieval1
+Ancient2 Medieval2
+Medieval1 Modern1

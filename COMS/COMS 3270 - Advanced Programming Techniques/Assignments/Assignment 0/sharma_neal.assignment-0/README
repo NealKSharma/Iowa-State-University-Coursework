@@ -1,0 +1,10 @@
+Knight's Tour
+
+This program uses recursive backtracking to find every Knight’s Tour on a 5x5 board. 
+It finds 1,728 total tours and prints them out as comma-separated lists of square numbers.
+
+Key Logic:
+- The board is represented by a 2d array. It stores the square numbers and tracks visits. When a square is visited, I set that square to -1.
+- Before moving, the tour() function checks if a square is within bounds and if its value is != -1. If it's -1, the code knows it has already been visited and skips it. It uses a step counter to know when it hits 25 squares.
+- Once a path is fully explored, the code resets the square's value from -1 back to its original number. This "unvisits" the square so it can be used in other paths.
+- Nested loops in main start a new search from every single square on the board to make sure no tours are missed.

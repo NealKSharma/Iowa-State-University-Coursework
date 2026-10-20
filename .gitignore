@@ -1,0 +1,57 @@
+# Local editor and operating-system files
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+
+# Local credentials (keep shareable examples)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# JavaScript dependencies and generated output
+node_modules/
+.next/
+.nuxt/
+.vite/
+.parcel-cache/
+coverage/
+dist/
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+
+# Compiled programs and build output
+*.exe
+*.o
+*.obj
+*.class
+out/
+build/
+
+# Local logs and temporary files
+*.log
+# Research run logs are part of the saved results
+!RESEARCH/**/*.log
+*.tmp
+*.swp
+*.swo
+
+# OneNote deleted-page caches; keep .one and .onetoc2 notebooks
+OneNote_RecycleBin/

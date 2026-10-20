@@ -1,0 +1,11 @@
+# Assignment 1.04: Player Character and Trainers
+
+The assignment builds on the previous assignment by adding a character movement. A priority queue driven event loop schedules turns for the player and all NPC trainers, redrawing the map after each player turn using `usleep(250000)`.
+
+Key Data Structures:
+- Entity struct: Contains position (y, x), terrain stood on, direction, and entity type.
+- Player struct: Wraps an Entity for the player character '@'.
+- heap / heapNode: Min-heap priority queue used to schedule turns by move time.
+- hikerDistance / rivalDistance: Distance maps regenerated each time the player moves.
+
+NPC types: Hiker (h), Rival (r), Pacer (p), Wanderer (w), Sentry (s), Explorer (e). Spawned via `--numtrainers <n>`, defaulting to 10. Always includes at least one hiker and one rival unless n is less than 2.

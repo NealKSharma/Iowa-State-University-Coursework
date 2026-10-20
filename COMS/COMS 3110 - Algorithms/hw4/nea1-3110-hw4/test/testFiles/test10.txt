@@ -1,0 +1,13 @@
+5
+A
+B
+C
+D
+E
+0
+5
+A B
+B C
+C D
+D E
+E A

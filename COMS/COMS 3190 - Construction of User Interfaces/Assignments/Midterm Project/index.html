@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saint Cy's Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/styles-nea1.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark sc-navbar" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand sc-brand" href="index.html">
+        <i class="bi bi-hospital-fill me-2" aria-hidden="true"></i>Saint Cy's
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navContent" aria-controls="navContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="content/patients.html">Patients</a></li>
+          <li class="nav-item"><a class="nav-link" href="content/doctors.html">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="content/management.html">Management</a></li>
+          <li class="nav-item"><a class="nav-link" href="author/authors.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="sc-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="sc-eyebrow">Welcome to</span>
+          <h1 class="sc-hero-title">Saint Cy's<br><em class="sc-title-accent">Hospital</em></h1>
+          <p class="sc-hero-sub">A unified management platform for patients, doctors, and administrators.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="content/patients.html" class="sc-btn-primary">
+              <i class="bi bi-calendar2-plus me-2" aria-hidden="true"></i>Book an Appointment
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+          <img src="assets/myotherimages/Logo.png" alt="Saint Cy's Hospital" class="sc-hero-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-stats-strip" aria-label="Hospital statistics">
+    <div class="container">
+      <div class="row text-center" id="statsContainer"></div>
+    </div>
+  </section>
+
+  <section class="sc-roles py-5" aria-label="User roles">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="sc-section-title">Who Are You?</h2>
+        <p class="sc-section-sub">Navigate to your role-specific dashboard.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="sc-role-card" tabindex="0" role="link"
+            onclick="window.location='content/patients.html'"
+            onkeydown="if(event.key==='Enter')window.location='content/patients.html'"
+            aria-label="Go to patient dashboard">
+            <div class="sc-role-icon"><i class="bi bi-person-heart" aria-hidden="true"></i></div>
+            <h3>Patient</h3>
+            <p>View appointments, request prescriptions, and message your care team.</p>
+            <span class="sc-role-link">Go to Dashboard <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="sc-role-card" tabindex="0" role="link"
+            onclick="window.location='content/doctors.html'"
+            onkeydown="if(event.key==='Enter')window.location='content/doctors.html'"
+            aria-label="Go to doctors dashboard">
+            <div class="sc-role-icon"><i class="bi bi-clipboard2-pulse" aria-hidden="true"></i></div>
+            <h3>Doctor</h3>
+            <p>Manage your schedule, review patient records, and handle prescriptions.</p>
+            <span class="sc-role-link">Go to Dashboard <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="sc-role-card" tabindex="0" role="link"
+            onclick="window.location='content/management.html'"
+            onkeydown="if(event.key==='Enter')window.location='content/management.html'"
+            aria-label="Go to admin dashboard">
+            <div class="sc-role-icon"><i class="bi bi-shield-plus" aria-hidden="true"></i></div>
+            <h3>Admin</h3>
+            <p>Oversee hospital operations, manage staff, and view analytics.</p>
+            <span class="sc-role-link">Go to Dashboard <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-features py-5" aria-label="Platform features">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="sc-section-title">Why Saint Cy's</h2>
+        <p class="sc-section-sub">Built around the people who matter most.</p>
+      </div>
+      <div class="row g-4" id="featuresContainer"></div>
+    </div>
+  </section>
+
+  <footer class="sc-footer">
+    <div class="container">
+      <div class="row align-items-center gy-2">
+        <div class="col-md-4">
+          <span class="sc-brand"><i class="bi bi-hospital-fill me-2" aria-hidden="true"></i>Saint Cy's Hospital</span>
+        </div>
+        <div class="col-md-4 text-center">
+          <small>SE/COM S 3190 &middot; Construction of User Interfaces &middot; Spring 2026</small>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <small>AH17 &middot; Neal Sharma &amp; Devank Uppal</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

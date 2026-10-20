@@ -1,0 +1,13 @@
+6
+Rome
+Greece
+Egypt
+London
+Paris
+Berlin
+2
+Rome Greece
+London Paris
+2
+Egypt Rome
+Berlin Paris

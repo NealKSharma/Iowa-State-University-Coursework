@@ -1,0 +1,16 @@
+7
+CentralCity
+North
+South
+East
+West
+Ancient1
+Ancient2
+4
+North South
+East West
+North East
+South West
+2
+Ancient1 CentralCity
+Ancient2 CentralCity

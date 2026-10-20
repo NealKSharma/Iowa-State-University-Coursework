@@ -1,0 +1,403 @@
+[
+    {
+        "id": "conversational-assistant",
+        "name": "Conversational Assistant",
+        "description": "Design a structured prompt for an AI assistant with a defined persona, behavior, and knowledge scope.",
+        "requiredSections": [
+            "persona",
+            "behavior",
+            "knowledge-scope",
+            "constraints"
+        ],
+        "optionalSections": [
+            "fallback"
+        ],
+        "configurations": {
+            "tones": [
+                "Professional",
+                "Friendly",
+                "Casual",
+                "Empathetic"
+            ],
+            "verbosityLevels": [
+                "Concise",
+                "Moderate",
+                "Detailed"
+            ],
+            "outputFormats": [
+                "Paragraph",
+                "Bullet Points",
+                "Mixed"
+            ]
+        },
+        "sections": {
+            "persona": {
+                "label": "Persona Definition",
+                "fields": [
+                    {
+                        "key": "role",
+                        "label": "Role and Title",
+                        "placeholder": "Identify the assistant's name and professional role",
+                        "minWords": 20
+                    },
+                    {
+                        "key": "traits",
+                        "label": "Personality Traits",
+                        "placeholder": "Describe the personality, background, and core values",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "behavior": {
+                "label": "Interaction Behavior",
+                "fields": [
+                    {
+                        "key": "response_style",
+                        "label": "Response Style",
+                        "placeholder": "Describe the linguistic patterns and interaction style",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "knowledge-scope": {
+                "label": "Knowledge Boundary",
+                "fields": [
+                    {
+                        "key": "topics_covered",
+                        "label": "Included Topics",
+                        "placeholder": "List the core subjects the assistant is expert in",
+                        "minWords": 20
+                    },
+                    {
+                        "key": "topics_excluded",
+                        "label": "Excluded Topics",
+                        "placeholder": "List sensitive or out-of-scope topics to avoid",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "constraints": {
+                "label": "Constraints",
+                "fields": [
+                    {
+                        "key": "hard_rules",
+                        "label": "Mandatory Rules",
+                        "placeholder": "Specify rules the AI must never violate",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "fallback": {
+                "label": "Fallback Logic",
+                "fields": [
+                    {
+                        "key": "fallback_response",
+                        "label": "Refusal Protocol",
+                        "placeholder": "Describe how the AI should handle out-of-scope queries",
+                        "minWords": 20
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": "code-generator",
+        "name": "Code Generator",
+        "description": "Optimize prompts for generating technically accurate code, algorithms, and documentation.",
+        "requiredSections": [
+            "role",
+            "context",
+            "instructions",
+            "constraints"
+        ],
+        "optionalSections": [
+            "examples"
+        ],
+        "configurations": {
+            "tones": [
+                "Technical",
+                "Instructive",
+                "Concise"
+            ],
+            "verbosityLevels": [
+                "Minimal",
+                "Standard",
+                "Verbose"
+            ],
+            "outputFormats": [
+                "Code Block",
+                "Explanation + Code",
+                "Step-by-Step"
+            ]
+        },
+        "sections": {
+            "role": {
+                "label": "Expert Persona",
+                "fields": [
+                    {
+                        "key": "tech_stack",
+                        "label": "Tech Stack Specialization",
+                        "placeholder": "e.g., Senior Systems Architect specializing in Rust and Distributed Systems",
+                        "minWords": 20
+                    },
+                    {
+                        "key": "experience",
+                        "label": "Background and Experience",
+                        "placeholder": "Describe specific professional experience and technical perspectives",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "context": {
+                "label": "Problem Context",
+                "fields": [
+                    {
+                        "key": "problem",
+                        "label": "Problem Description",
+                        "placeholder": "Describe the technical challenge and business logic requirements",
+                        "minWords": 20
+                    },
+                    {
+                        "key": "environment",
+                        "label": "Execution Environment",
+                        "placeholder": "Describe the infrastructure, libraries, or existing codebase context",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "instructions": {
+                "label": "Implementation Steps",
+                "fields": [
+                    {
+                        "key": "steps",
+                        "label": "Logic Breakdown",
+                        "placeholder": "Provide step-by-step logic required for the algorithm or function",
+                        "minWords": 20
+                    },
+                    {
+                        "key": "logic_style",
+                        "label": "Architectural Approach",
+                        "placeholder": "Specify the preferred design patterns or algorithmic strategies",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "constraints": {
+                "label": "Technical Constraints",
+                "fields": [
+                    {
+                        "key": "time_complexity",
+                        "label": "Time Complexity",
+                        "placeholder": "Specify formal Big-O requirements (e.g., must be O(n log n))",
+                        "minWords": 20
+                    },
+                    {
+                        "key": "space_complexity",
+                        "label": "Space Complexity",
+                        "placeholder": "Specify memory constraints and resource management rules",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "examples": {
+                "label": "Reference Examples",
+                "fields": [
+                    {
+                        "key": "input_val",
+                        "label": "Sample Input Data",
+                        "placeholder": "Provide example data structures or API request bodies",
+                        "minWords": 20
+                    },
+                    {
+                        "key": "output_val",
+                        "label": "Expected Return Value",
+                        "placeholder": "Describe the exact format and content of the expected output",
+                        "minWords": 20
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": "study-tutor",
+        "name": "Study Tutor",
+        "description": "Helps build structured prompts for an AI tutor that explains concepts clearly and supports student learning.",
+        "requiredSections": [
+            "subject",
+            "student-context",
+            "teaching-approach",
+            "constraints"
+        ],
+        "optionalSections": [
+            "practice"
+        ],
+        "configurations": {
+            "tones": [
+                "Encouraging",
+                "Academic",
+                "Patient"
+            ],
+            "verbosityLevels": [
+                "Concise",
+                "Moderate",
+                "Detailed"
+            ],
+            "outputFormats": [
+                "Step-by-Step",
+                "Lesson Style",
+                "Bullet Points"
+            ]
+        },
+        "sections": {
+            "subject": {
+                "label": "Subject Focus",
+                "fields": [
+                    {
+                        "key": "topic",
+                        "label": "Topic or Concept",
+                        "placeholder": "Describe the specific topic or concept the student is trying to learn",
+                        "minWords": 20
+                    },
+                    {
+                        "key": "goal",
+                        "label": "Learning Goal",
+                        "placeholder": "Explain what the student should understand or be able to do after the lesson",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "student-context": {
+                "label": "Student Context",
+                "fields": [
+                    {
+                        "key": "background",
+                        "label": "Student Background",
+                        "placeholder": "Describe the student's current level, previous knowledge, and any confusion they have",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "teaching-approach": {
+                "label": "Teaching Approach",
+                "fields": [
+                    {
+                        "key": "style",
+                        "label": "Explanation Style",
+                        "placeholder": "Describe how the tutor should explain the concept, such as using examples or step by step logic",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "constraints": {
+                "label": "Constraints",
+                "fields": [
+                    {
+                        "key": "rules",
+                        "label": "Rules",
+                        "placeholder": "Define rules like avoiding complex jargon or making sure the explaination is clear and structured",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "practice": {
+                "label": "Practice",
+                "fields": [
+                    {
+                        "key": "questions",
+                        "label": "Practice Questions",
+                        "placeholder": "Describe the type of questions or examples the tutor should give for pratice",
+                        "minWords": 20
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": "resume-reviewer",
+        "name": "Resume Reviewer",
+        "description": "Helps review resumes by providing structured feedback on content, formatting, and overall impact.",
+        "requiredSections": [
+            "target-role",
+            "resume-context",
+            "review-focus",
+            "constraints"
+        ],
+        "optionalSections": [
+            "improvements"
+        ],
+        "configurations": {
+            "tones": [
+                "Professional",
+                "Direct",
+                "Supportive"
+            ],
+            "verbosityLevels": [
+                "Concise",
+                "Moderate",
+                "Detailed"
+            ],
+            "outputFormats": [
+                "Bullet Points",
+                "Section Breakdown",
+                "Action Plan"
+            ]
+        },
+        "sections": {
+            "target-role": {
+                "label": "Target Role",
+                "fields": [
+                    {
+                        "key": "role",
+                        "label": "Desired Role",
+                        "placeholder": "Describe the job or internship the resume is being tailored for",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "resume-context": {
+                "label": "Resume Context",
+                "fields": [
+                    {
+                        "key": "background",
+                        "label": "Candidate Background",
+                        "placeholder": "Explain the candidate's experience level, education, and overall background",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "review-focus": {
+                "label": "Review Focus",
+                "fields": [
+                    {
+                        "key": "criteria",
+                        "label": "Evaluation Criteria",
+                        "placeholder": "Describe what the reviewer should focus on such as clarity, metrics, formatting, and relevance",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "constraints": {
+                "label": "Constraints",
+                "fields": [
+                    {
+                        "key": "rules",
+                        "label": "Review Rules",
+                        "placeholder": "Define important rules like being honest, structured, and giving actionable feedback",
+                        "minWords": 20
+                    }
+                ]
+            },
+            "improvements": {
+                "label": "Improvement Suggestions",
+                "fields": [
+                    {
+                        "key": "changes",
+                        "label": "Suggested Changes",
+                        "placeholder": "Describe specific improvements or rewrites that could make the resume stronger and more competetive",
+                        "minWords": 20
+                    }
+                ]
+            }
+        }
+    }
+]

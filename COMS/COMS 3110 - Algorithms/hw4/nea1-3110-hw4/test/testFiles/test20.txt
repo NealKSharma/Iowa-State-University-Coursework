@@ -1,0 +1,19 @@
+5
+Modern1
+Modern2
+Modern3
+Modern4
+Ancient
+10
+Modern1 Modern2
+Modern1 Modern3
+Modern1 Modern4
+Modern2 Modern3
+Modern2 Modern4
+Modern3 Modern4
+Modern1 Modern1
+Modern2 Modern2
+Modern3 Modern3
+Modern4 Modern4
+1
+Ancient Modern1

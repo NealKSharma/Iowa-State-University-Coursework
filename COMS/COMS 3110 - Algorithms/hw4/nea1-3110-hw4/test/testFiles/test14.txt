@@ -1,0 +1,26 @@
+15
+City1
+City2
+City3
+City4
+City5
+City6
+City7
+City8
+City9
+City10
+Ancient1
+Ancient2
+Medieval1
+Medieval2
+Modern
+3
+City1 City2
+City3 City4
+City5 City6
+5
+Ancient1 Medieval1
+Ancient2 Medieval1
+Medieval1 Modern
+Medieval2 Modern
+City7 City8

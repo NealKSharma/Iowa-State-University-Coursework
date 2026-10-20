@@ -1,0 +1,27 @@
+12
+Bronze1
+Bronze2
+Bronze3
+Iron1
+Iron2
+Iron3
+Classical1
+Classical2
+Medieval1
+Medieval2
+Renaissance1
+Renaissance2
+6
+Bronze1 Bronze2
+Bronze2 Bronze3
+Iron1 Iron2
+Classical1 Classical2
+Medieval1 Medieval2
+Renaissance1 Renaissance2
+6
+Bronze1 Iron1
+Bronze3 Iron2
+Iron1 Classical1
+Iron3 Classical2
+Classical2 Medieval1
+Medieval2 Renaissance1

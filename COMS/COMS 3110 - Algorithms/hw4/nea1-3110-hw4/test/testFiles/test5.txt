@@ -1,0 +1,11 @@
+4
+CityA
+CityB
+CityC
+CityD
+2
+CityA CityB
+CityB CityC
+2
+CityA CityD
+CityD CityC

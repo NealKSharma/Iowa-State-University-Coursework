@@ -1,0 +1,28 @@
+TIC 100625998
+
+Gaia DR2 source_id =  1900545847646195840
+G = 16.197, MG = 11.400, bp_rp =  0.136
+
+2-minute cadence data
+Number of sectors:  2
+CROWDSAP: 0.367
+Best period =   3.44675 hours, Amplitude =  0.58530 per cent
+FAP = 1.36305e-05
+
+20-second cadence data
+Number of sectors:  2
+CROWDSAP: 0.367
+Best period =   0.04689 hours, Amplitude =  0.44220 per cent
+FAP = 7.94143e-01
+
+Other G < 18. matches within 5 pixels:
+source_id            G       MG    bp_rp
+ 1900545813286457344 16.217  4.942  0.950
+ 1900545847646196352 13.986  4.798  0.860
+ 1900545950725410432 15.423  5.247  0.998
+ 1900545950725409536 13.514  3.720  0.991
+ 1900546569200699520 14.407  4.613  0.875
+ 1900545710207243136 16.453  4.310  0.839
+ 1900545710207153408 15.255  5.275  0.973
+ 1900545778926580352 17.048  7.346  1.579
+ 1900545675847505280 14.943  5.762  1.249

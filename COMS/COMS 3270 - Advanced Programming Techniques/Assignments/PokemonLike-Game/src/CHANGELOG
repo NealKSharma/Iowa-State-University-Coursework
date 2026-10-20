@@ -1,0 +1,19 @@
+February 28, 2026
+- Updated the getCost method to used a more optimized way of returning cost. Added costs for all trainers.
+- Commented out the distanceMap printing of different trainers.
+- Added entity list to the singleMap struct which stores trainer details per map.
+
+March 2, 2026
+- Added trainer placement which users the --numtrainers flag. Set the default to 10.
+- Created the infinite loop for the entityMovement. This stops the user from moving across maps.
+- Fixed a bug where my include was strings.h instead of string.h
+
+March 3, 2026
+- Worked on the entityMovementLoop the whole day (Yes, that's all I did.)
+- Changed the heap a tiny amount to be more suited for entity movement.
+- Developed the movement logic for different types of entities.
+
+March 4, 2026
+- Worked more on the entityMovementLoop handeling edge cases and bugs.
+- Finished up the CHANGELOG and README files.
+- Made sure everything works as it's supposed to.

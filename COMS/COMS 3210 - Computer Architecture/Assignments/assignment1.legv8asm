@@ -1,0 +1,326 @@
+// Group: Neal Kaushik Sharma (nea1@iastate.edu)
+// base=X22, n=X23, i=X24
+    ADD X22, XZR, XZR
+    ADDI X23, XZR, #512
+
+    ADD X0, X22, XZR
+    ADD X1, X23, XZR
+    ADDI X2, XZR, #42
+    BL fill_array
+
+    ADD X0, X22, XZR
+    ADD X1, X23, XZR
+    BL local_sort
+    // PRNT X22 // For debugging
+
+    ADD X24, XZR, XZR // i = 0
+
+verify_loop:
+    SUBS XZR, X24, X23
+    B.GE verify_done
+
+    LSL X9, X24, #3
+    LDUR X2, [X9, #0] // grab a[i]
+    ADD X0, X22, XZR
+    ADD X1, X23, XZR
+    BL binary_search
+    CBZ X0, do_halt
+
+    ADDI X24, X24, #1
+    B verify_loop
+
+verify_done:
+    LDUR X9, [X22, #0] // a[0]
+    SUBI X2, X9, #1
+    ADD X0, X22, XZR
+    ADD X1, X23, XZR
+    BL binary_search
+    CBNZ X0, do_halt
+
+    LDUR X9, [X22, #0] // a[0] again
+    ADDI X2, X9, #1
+    ADD X0, X22, XZR
+    ADD X1, X23, XZR
+    BL binary_search
+    CBNZ X0, do_halt
+
+    ADDI X9, XZR, #511
+    LSL X9, X9, #3
+    LDUR X9, [X9, #0] // a[511]
+    ADDI X2, X9, #1
+    ADD X0, X22, XZR
+    ADD X1, X23, XZR
+    BL binary_search
+    CBNZ X0, do_halt
+
+    HALT // Successful
+
+do_halt:
+    HALT // something went wrong
+
+// fill_array(a=X0, n=X1, seed=X2)
+// all caller-saved so no stack needed
+fill_array:
+    ADD X9, X0, XZR // base
+    ADD X10, X1, XZR // n
+    ADD X11, X2, XZR // seed
+
+    ADDI X12, XZR, #0xFFF
+    LSL X12, X12, #12
+    ORRI X12, X12, #0xFFF
+    LSL X12, X12, #7
+    ORRI X12, X12, #0x7F
+
+    ADD X13, XZR, XZR // i = 0
+
+fill_loop:
+    SUBS XZR, X13, X10
+    B.GE fill_done
+
+    // x = seed + all these shifts
+    ADD X14, X11, XZR
+    LSL X15, X11, #2
+    ADD X14, X14, X15
+    LSL X15, X11, #3
+    ADD X14, X14, X15
+    LSL X15, X11, #5
+    ADD X14, X14, X15
+    LSL X15, X11, #6
+    ADD X14, X14, X15
+    LSL X15, X11, #9
+    ADD X14, X14, X15
+    LSL X15, X11, #10
+    ADD X14, X14, X15
+    LSL X15, X11, #11
+    ADD X14, X14, X15
+    LSL X15, X11, #14
+    ADD X14, X14, X15
+    LSL X15, X11, #17
+    ADD X14, X14, X15
+    LSL X15, X11, #18
+    ADD X14, X14, X15
+    LSL X15, X11, #22
+    ADD X14, X14, X15
+    LSL X15, X11, #23
+    ADD X14, X14, X15
+    LSL X15, X11, #24
+    ADD X14, X14, X15
+    LSL X15, X11, #30
+    ADD X14, X14, X15
+    ADDI X14, X14, #2047
+    ADDI X14, X14, #2047
+    ADDI X14, X14, #2047
+    ADDI X14, X14, #2047
+    ADDI X14, X14, #2047
+    ADDI X14, X14, #2047
+    ADDI X14, X14, #63
+
+    AND X11, X14, X12
+
+    LSL X15, X13, #3
+    ADD X15, X9, X15
+    STUR X11, [X15, #0]
+    ADDI X13, X13, #1
+    B fill_loop
+
+fill_done:
+    BR LR
+
+// swap(a=X0, i=X1, j=X2)
+swap:
+    LSL X9, X1, #3
+    ADD X9, X0, X9
+    LDUR X11, [X9, #0] // stash a[i]
+
+    LSL X10, X2, #3
+    ADD X10, X0, X10
+    LDUR X12, [X10, #0] // grab a[j]
+
+    STUR X12, [X9, #0] // a[i] = a[j]
+    STUR X11, [X10, #0]
+    BR LR
+
+// is_locally_sorted(i=X0, a=X1, n=X2)
+// returns 1=yes 0=no, leaf fn
+is_locally_sorted:
+    SUBIS XZR, X2, #2
+    B.LT ils_true // n<=1
+
+    CBNZ X0, ils_not_zero // if i!=0 skip the left-edge check
+    LDUR X9, [X1, #0]
+    LDUR X10, [X1, #8]
+    SUBS XZR, X9, X10
+    B.LE ils_true // a[0]<=a[1] ok
+    B ils_false
+
+ils_not_zero:
+    SUBI X9, X2, #1
+    SUBS XZR, X0, X9
+    B.NE ils_middle // not at right edge either, go to middle check
+
+    // right edge: just check a[n-2] <= a[n-1]
+    SUBI X9, X2, #2
+    LSL X9, X9, #3
+    ADD X9, X1, X9
+    LDUR X10, [X9, #0]
+    LDUR X11, [X9, #8]
+    SUBS XZR, X10, X11
+    B.LE ils_true
+    B ils_false
+
+ils_middle:
+    // 0 < i < n-1: check both neighbors
+    SUBI X9, X0, #1
+    LSL X9, X9, #3
+    ADD X9, X1, X9
+    LDUR X10, [X9, #0] // a[i-1]
+    LDUR X11, [X9, #8] // a[i]
+    SUBS XZR, X10, X11
+    B.GT ils_false // left neighbor bigger, not sorted
+    LDUR X12, [X9, #16] // a[i+1]
+    SUBS XZR, X11, X12
+    B.GT ils_false // right neighbor smaller, not sorted
+
+ils_true:
+    ADDI X0, XZR, #1
+    BR LR
+
+ils_false:
+    ADD X0, XZR, XZR
+    BR LR
+
+// local_sort(a=X0, n=X1)
+// keeps doing passes until everything is locally sorted
+// non-leaf: X19=a X20=n X21=i
+local_sort:
+    SUBI SP, SP, #32
+    STUR LR, [SP, #0]
+    STUR X19, [SP, #8]
+    STUR X20, [SP, #16]
+    STUR X21, [SP, #24]
+
+    ADD X19, X0, XZR
+    ADD X20, X1, XZR
+
+ls_outer:
+    ADD X21, XZR, XZR // reset i each outer pass
+
+ls_inner:
+    SUBS XZR, X21, X20
+    B.GE ls_done
+
+    ADD X0, X21, XZR
+    ADD X1, X19, XZR
+    ADD X2, X20, XZR
+    BL is_locally_sorted
+    CBZ X0, ls_fix // found a problem spot
+
+    ADDI X21, X21, #1
+    B ls_inner
+
+ls_fix:
+    CBZ X21, ls_go_right // i==0, can only swap right
+
+    SUBI X9, X21, #1
+    LSL X9, X9, #3
+    ADD X9, X19, X9
+    LDUR X9, [X9, #0] // a[i-1]
+    LSL X10, X21, #3
+    ADD X10, X19, X10
+    LDUR X10, [X10, #0] // a[i]
+    SUBS XZR, X9, X10
+    B.GT ls_go_left // left is bigger, swap left
+
+ls_go_right:
+    ADD X0, X19, XZR
+    ADD X1, X21, XZR
+    ADDI X2, X21, #1
+    BL swap
+    B ls_outer
+
+ls_go_left:
+    ADD X0, X19, XZR
+    SUBI X1, X21, #1
+    ADD X2, X21, XZR
+    BL swap
+    B ls_outer
+
+ls_done:
+    LDUR LR, [SP, #0]
+    LDUR X19, [SP, #8]
+    LDUR X20, [SP, #16]
+    LDUR X21, [SP, #24]
+    ADDI SP, SP, #32
+    BR LR
+
+// binary_search(a=X0, n=X1, val=X2) -> X0=1 found, 0 not found
+// recursive, non-leaf: X19=a X20=n X21=val
+binary_search:
+    SUBI SP, SP, #32
+    STUR LR, [SP, #0]
+    STUR X19, [SP, #8]
+    STUR X20, [SP, #16]
+    STUR X21, [SP, #24]
+
+    ADD X19, X0, XZR
+    ADD X20, X1, XZR
+    ADD X21, X2, XZR
+
+    CBZ X20, bs_false // empty
+
+    SUBIS XZR, X20, #1
+    B.NE bs_general
+    LDUR X9, [X19, #0]
+    SUBS XZR, X9, X21
+    B.EQ bs_true
+    B bs_false
+
+bs_general:
+    LSR X9, X20, #1 // mid = n/2
+
+    LSL X10, X9, #3
+    ADD X10, X19, X10
+    LDUR X10, [X10, #0] // a[mid]
+
+    SUBS XZR, X10, X21
+    B.EQ bs_true            
+    B.GT bs_left // too big, go left
+
+    // too small, go right
+    ANDI X11, X20, #1
+    CBZ X11, bs_even
+    ADD X11, XZR, XZR // odd: right half = mid elements
+    B bs_right
+bs_even:
+    ADDI X11, XZR, #1 // even: right half = mid-1 elements
+
+bs_right:
+    LSL X12, X9, #3
+    ADDI X12, X12, #8
+    ADD X0, X19, X12 // skip past mid
+    SUB X1, X9, X11
+    ADD X2, X21, XZR
+    BL binary_search
+    B bs_out
+
+bs_left:
+    ADD X0, X19, XZR
+    ADD X1, X9, XZR // left half = mid elements
+    ADD X2, X21, XZR
+    BL binary_search
+    B bs_out
+
+bs_true:
+    ADDI X0, XZR, #1
+    B bs_out
+
+bs_false:
+    ADD X0, XZR, XZR
+
+bs_out:
+    LDUR LR, [SP, #0]
+    LDUR X19, [SP, #8]
+    LDUR X20, [SP, #16]
+    LDUR X21, [SP, #24]
+    ADDI SP, SP, #32
+    BR LR

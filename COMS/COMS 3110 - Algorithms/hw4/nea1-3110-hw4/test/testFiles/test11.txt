@@ -1,0 +1,22 @@
+7
+Athens
+Sparta
+Troy
+Carthage
+Rome
+Pompeii
+Herculaneum
+4
+Athens Sparta
+Sparta Troy
+Pompeii Herculaneum
+Rome Pompeii
+3
+Athens Carthage
+Carthage Troy
+Rome Athens
+
+Explanation: Athens, Sparta, Troy all coexist (transitively through coexistence).
+Rome coexists with Pompeii. Athens fell before Carthage, Carthage fell before Troy.
+But Troy coexists with Athens - contradiction! Also Rome fell before Athens creates
+a complex temporal impossibility.

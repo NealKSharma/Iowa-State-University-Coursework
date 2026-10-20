@@ -1,0 +1,659 @@
+{
+  "hospitalStats": [
+    {
+      "value": "240+",
+      "label": "Specialist Doctors"
+    },
+    {
+      "value": "1,800",
+      "label": "Patients Served Daily"
+    },
+    {
+      "value": "36",
+      "label": "Departments"
+    },
+    {
+      "value": "98%",
+      "label": "Patient Satisfaction"
+    }
+  ],
+  "features": [
+    {
+      "icon": "bi-calendar2-check",
+      "title": "Easy Scheduling",
+      "description": "Book, reschedule, or cancel appointments in seconds."
+    },
+    {
+      "icon": "bi-chat-heart",
+      "title": "Secure Messaging",
+      "description": "Communicate directly with your care team."
+    },
+    {
+      "icon": "bi-capsule",
+      "title": "Pharmacy Management",
+      "description": "View prescriptions and request refills easily."
+    }
+  ],
+  "patient": {
+    "name": "John Doe",
+    "dob": "March 14, 1990",
+    "email": "johndoe@email.com",
+    "phone": "(515) 000-0000",
+    "insurance": "Blue Cross Blue Shield",
+    "primary_doctor": "Dr. Emily Hartwell"
+  },
+  "appointments": [
+    {
+      "appointment_id": "APT001",
+      "department": "Cardiology",
+      "doctor": "Dr. Emily Hartwell",
+      "date": "March 15, 2026",
+      "time": "10:00 AM",
+      "status": "Upcoming",
+      "description": "Routine heart checkup and ECG screening."
+    },
+    {
+      "appointment_id": "APT002",
+      "department": "Neurology",
+      "doctor": "Dr. Samuel Pierce",
+      "date": "March 22, 2026",
+      "time": "2:30 PM",
+      "status": "Upcoming",
+      "description": "Follow-up consultation for recurring headaches."
+    },
+    {
+      "appointment_id": "APT003",
+      "department": "Dermatology",
+      "doctor": "Dr. Priya Nair",
+      "date": "February 10, 2026",
+      "time": "9:00 AM",
+      "status": "Past",
+      "description": "Annual skin evaluation and mole mapping."
+    }
+  ],
+  "pharmacy": [
+    {
+      "medication_id": "MED001",
+      "name": "Amoxicillin 500mg",
+      "category": "Antibiotic",
+      "description": "Broad-spectrum antibiotic for bacterial infections.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED002",
+      "name": "Lisinopril 10mg",
+      "category": "Antihypertensive",
+      "description": "ACE inhibitor used to treat high blood pressure.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1641561421178-db8542057811?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED003",
+      "name": "Metformin 850mg",
+      "category": "Antidiabetic",
+      "description": "First-line oral medication for type 2 diabetes.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED004",
+      "name": "Ibuprofen 400mg",
+      "category": "Anti-inflammatory",
+      "description": "Pain reliever and fever reducer for minor aches.",
+      "access_level": "OTC Available",
+      "image_url": "https://images.unsplash.com/photo-1626716493137-b67fe9501e76?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED005",
+      "name": "Sertraline 50mg",
+      "category": "Antidepressant",
+      "description": "SSRI prescribed for depression and anxiety disorders.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED006",
+      "name": "Oxycodone 5mg",
+      "category": "Opioid Analgesic",
+      "description": "Controlled opioid for moderate-to-severe pain.",
+      "access_level": "Controlled — Provider Only",
+      "image_url": "https://images.unsplash.com/photo-1632024894467-10dd0266ad92?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED007",
+      "name": "Albuterol Inhaler",
+      "category": "Bronchodilator",
+      "description": "Fast-acting rescue inhaler for asthma and COPD.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1733751682743-8f46e457149e?q=80&w=1381&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED008",
+      "name": "Atorvastatin 20mg",
+      "category": "Statin",
+      "description": "Reduces LDL cholesterol and cardiovascular risk.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1614643458308-656e13a14a2f?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED009",
+      "name": "Cetirizine 10mg",
+      "category": "Antihistamine",
+      "description": "Non-drowsy allergy relief for seasonal allergies.",
+      "access_level": "OTC Available",
+      "image_url": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?q=80&w=1540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED010",
+      "name": "Alprazolam 0.5mg",
+      "category": "Benzodiazepine",
+      "description": "Short-term management of severe anxiety disorders.",
+      "access_level": "Controlled — Provider Only",
+      "image_url": "https://images.unsplash.com/photo-1630094539465-9838f369f766?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED011",
+      "name": "Omeprazole 20mg",
+      "category": "Proton Pump Inhibitor",
+      "description": "Treats acid reflux, GERD, and stomach ulcers.",
+      "access_level": "OTC Available",
+      "image_url": "https://images.unsplash.com/photo-1655913198024-1a30f1c911e5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED012",
+      "name": "Levothyroxine 50mcg",
+      "category": "Thyroid Hormone",
+      "description": "Replacement therapy for hypothyroidism.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1623066542605-bc25b4b662dd?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED013",
+      "name": "Azithromycin 250mg",
+      "category": "Antibiotic",
+      "description": "Used to treat respiratory and skin bacterial infections.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1550572017-edd951b55104?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED014",
+      "name": "Prednisone 10mg",
+      "category": "Corticosteroid",
+      "description": "Anti-inflammatory used for allergic reactions and autoimmune conditions.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED015",
+      "name": "Hydrochlorothiazide 25mg",
+      "category": "Diuretic",
+      "description": "Water pill used to treat fluid retention and high blood pressure.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1768403305881-a7a82fd63512?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "medication_id": "MED016",
+      "name": "Gabapentin 300mg",
+      "category": "Anticonvulsant",
+      "description": "Treats nerve pain and is used as an adjunct for seizure control.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1563213126-a4273aed2016?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED017",
+      "name": "Pantoprazole 40mg",
+      "category": "Proton Pump Inhibitor",
+      "description": "Reduces stomach acid for GERD and erosive esophagitis treatment.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED018",
+      "name": "Melatonin 5mg",
+      "category": "Sleep Aid",
+      "description": "Natural hormone supplement to regulate sleep-wake cycles.",
+      "access_level": "OTC Available",
+      "image_url": "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED019",
+      "name": "Amlodipine 5mg",
+      "category": "Calcium Channel Blocker",
+      "description": "Treats chest pain and high blood pressure by relaxing blood vessels.",
+      "access_level": "Prescription Required",
+      "image_url": "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=400&auto=format&fit=crop"
+    },
+    {
+      "medication_id": "MED020",
+      "name": "Vitamin D3 1000IU",
+      "category": "Supplement",
+      "description": "Supports bone health, immune function, and calcium absorption.",
+      "access_level": "OTC Available",
+      "image_url": "https://images.unsplash.com/photo-1597068596627-717bd7124319?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ],
+  "doctorDashboard": {
+    "overview": {
+      "name": "Dr. Emily Hartwell",
+      "department": "Cardiology",
+      "photoUrl": "https://unsplash.com/photos/FVh_yqLR9eA/download?force=true&w=1200",
+      "photoAlt": "Portrait of Dr. Emily Hartwell outdoors",
+      "specialty": "Attending Cardiologist · Preventive and interventional heart care",
+      "shift": "Monday, March 9, 2026 · 8:00 AM - 8:00 PM",
+      "location": "Heart and Vascular Center · Floor 3",
+      "focus": "Prioritizing high-risk follow-ups and post-procedure recovery",
+      "message": "You have a full clinic block this morning, two inpatient consults after lunch, and three medication requests pending signature."
+    },
+    "metrics": [
+      {
+        "value": "8",
+        "label": "Patients Today",
+        "detail": "Four clinic visits, two inpatient consults, and two follow-up calls remain on the schedule."
+      },
+      {
+        "value": "3",
+        "label": "Pending Refills",
+        "detail": "Prescription requests need review before the afternoon nursing handoff."
+      },
+      {
+        "value": "2",
+        "label": "Urgent Cases",
+        "detail": "Telemetry and chest pain follow-ups are flagged for immediate reassessment."
+      },
+      {
+        "value": "11",
+        "label": "Notes Due",
+        "detail": "Visit documentation and discharge summaries should be signed before end of shift."
+      }
+    ],
+    "schedule": [
+      {
+        "type": "Follow-Up",
+        "status": "Checked In",
+        "statusClass": "text-bg-success",
+        "patient": "John Doe",
+        "date": "March 9, 2026",
+        "time": "10:00 AM",
+        "location": "Exam Room 3A",
+        "reason": "Routine cardiac checkup with ECG review and medication adjustment discussion.",
+        "nextAction": "Review vitals and clear updated hypertension plan."
+      },
+      {
+        "type": "Consult",
+        "status": "Next Up",
+        "statusClass": "text-bg-warning",
+        "patient": "Marina Keller",
+        "date": "March 9, 2026",
+        "time": "11:15 AM",
+        "location": "Telemetry Unit 2",
+        "reason": "Post-stent monitoring after overnight chest discomfort.",
+        "nextAction": "Confirm enzyme trend and discharge readiness."
+      },
+      {
+        "type": "Rounds",
+        "status": "Scheduled",
+        "statusClass": "text-bg-primary",
+        "patient": "ICU Bedside Review",
+        "date": "March 9, 2026",
+        "time": "1:30 PM",
+        "location": "Cardiac ICU",
+        "reason": "Afternoon rounds for two step-down transfers and one unstable rhythm consult.",
+        "nextAction": "Coordinate with nursing and respiratory therapy."
+      },
+      {
+        "type": "Telehealth",
+        "status": "Later Today",
+        "statusClass": "text-bg-secondary",
+        "patient": "Caleb Ross",
+        "date": "March 9, 2026",
+        "time": "4:00 PM",
+        "location": "Virtual Follow-Up",
+        "reason": "Medication tolerance check after new statin and diet plan.",
+        "nextAction": "Close chart note and release follow-up labs."
+      }
+    ],
+    "patients": [
+      {
+        "name": "John Doe",
+        "unit": "Outpatient",
+        "priority": "Moderate",
+        "priorityClass": "text-bg-warning",
+        "imageUrl": "https://unsplash.com/photos/C2Nf5iPOnz0/download?force=true&w=900",
+        "imageAlt": "Portrait of John Doe",
+        "age": 35,
+        "condition": "Hypertension and intermittent palpitations",
+        "lastVisit": "February 2, 2026",
+        "summary": "Symptoms improved since beta blocker adjustment, but home blood pressure readings remain inconsistent.",
+        "nextStep": "Discuss ECG results and reinforce medication adherence."
+      },
+      {
+        "name": "Marina Keller",
+        "unit": "Telemetry",
+        "priority": "High",
+        "priorityClass": "text-bg-danger",
+        "imageUrl": "https://unsplash.com/photos/SJvDxw0azqw/download?force=true&w=900",
+        "imageAlt": "Portrait of Marina Keller",
+        "age": 61,
+        "condition": "Coronary artery disease, post-procedure observation",
+        "lastVisit": "March 14, 2026",
+        "summary": "No active chest pain this morning, though overnight rhythm changes require repeat review.",
+        "nextStep": "Evaluate discharge timing after repeat troponin panel."
+      },
+      {
+        "name": "Caleb Ross",
+        "unit": "Virtual Care",
+        "priority": "Routine",
+        "priorityClass": "text-bg-primary",
+        "imageUrl": "https://unsplash.com/photos/pAtA8xe_iVM/download?force=true&w=900",
+        "imageAlt": "Portrait of Caleb Ross",
+        "age": 48,
+        "condition": "Hyperlipidemia management",
+        "lastVisit": "February 27, 2026",
+        "summary": "Lab values are trending in the right direction; patient needs confirmation on side effect monitoring.",
+        "nextStep": "Approve refill and send dietitian follow-up message."
+      }
+    ],
+    "prescriptionQueue": [
+      {
+        "patient": "John Doe",
+        "status": "Review Needed",
+        "medication": "Atorvastatin 20mg",
+        "imageUrl": "https://images.unsplash.com/photo-1614643458308-656e13a14a2f?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "imageAlt": "Portrait of John Doe",
+        "dosage": "Take once daily in the morning",
+        "instructions": "Patient requested a refill with note about occasional dizziness during exercise.",
+        "action": "Verify blood pressure log before signing refill."
+      },
+      {
+        "patient": "Marina Keller",
+        "status": "Priority",
+        "medication": "Levothyroxine 50mcg",
+        "imageUrl": "https://images.unsplash.com/photo-1623066542605-bc25b4b662dd?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "imageAlt": "Portrait of Marina Keller",
+        "dosage": "Take once daily with evening meal",
+        "instructions": "Discharge medication package requires attending approval and pharmacy release.",
+        "action": "Sign discharge medication reconciliation."
+      },
+      {
+        "patient": "Caleb Ross",
+        "status": "Ready",
+        "medication": "Omeprazole 20mg",
+        "imageUrl": "https://images.unsplash.com/photo-1655913198024-1a30f1c911e5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "imageAlt": "Portrait of Caleb Ross",
+        "dosage": "Take once daily",
+        "instructions": "Preventive refill request has no contraindications and pharmacy prepared the order.",
+        "action": "Approve refill and release telehealth after-visit summary."
+      }
+    ],
+    "profile": {
+      "email": "emily.hartwell@saintcys.org",
+      "phone": "(515) 555-0148",
+      "office": "Suite 305, Heart and Vascular Center",
+      "license": "IA-MD-447291",
+      "nurseLine": "Extension 214",
+      "availability": "Clinic until 12:30 PM, inpatient rounds after 1:30 PM"
+    }
+  },
+  "managementDashboard": {
+    "overview": {
+      "name": "Alicia Monroe",
+      "department": "Administration",
+      "title": "Director of Hospital Operations",
+      "shift": "Monday, March 9, 2026 - 8:00 AM to 6:00 PM",
+      "location": "Operations Suite - Floor 2",
+      "focus": "User provisioning, access control, and staffing approvals",
+      "message": "Three access requests are waiting for review, and the directory is ready for new account creation and role updates."
+    },
+    "metrics": [
+      {
+        "value": "4",
+        "label": "Active Accounts",
+        "detail": "Currently active users with access to patient, doctor, or admin tools."
+      },
+      {
+        "value": "3",
+        "label": "Pending Requests",
+        "detail": "Requests for role changes, unlocks, and new department access awaiting approval."
+      },
+      {
+        "value": "1",
+        "label": "Suspended Users",
+        "detail": "Accounts temporarily disabled until policy or compliance review is completed."
+      },
+      {
+        "value": "1",
+        "label": "Role Changes Today",
+        "detail": "Users currently marked pending whose access level still needs final confirmation."
+      }
+    ],
+    "roles": [
+      "Patient",
+      "Doctor",
+      "Nurse",
+      "Admin",
+      "Pharmacist",
+      "Billing"
+    ],
+    "accessRequests": [
+      {
+        "requestId": "REQ001",
+        "user": "Megan Ortiz",
+        "email": "megan.ortiz@saintcys.org",
+        "requestedRole": "Nurse",
+        "department": "Emergency Department",
+        "type": "New Access",
+        "status": "Pending",
+        "reason": "New hire needs clinical charting access before the Tuesday orientation block."
+      },
+      {
+        "requestId": "REQ002",
+        "user": "Daniel Reeves",
+        "email": "daniel.reeves@saintcys.org",
+        "requestedRole": "Admin",
+        "department": "Operations",
+        "type": "Role Change",
+        "status": "Pending",
+        "reason": "Supervisor requested elevated permissions for staffing and scheduling oversight."
+      },
+      {
+        "requestId": "REQ003",
+        "user": "Priya Desai",
+        "email": "priya.desai@saintcys.org",
+        "requestedRole": "Doctor",
+        "department": "Neurology",
+        "type": "Account Unlock",
+        "status": "Pending",
+        "reason": "Account was locked after repeated sign-in failures during weekend on-call coverage."
+      }
+    ],
+    "users": [
+      {
+        "userId": "USR001",
+        "name": "John Doe",
+        "email": "johndoe@email.com",
+        "role": "Patient",
+        "status": "Active",
+        "department": "Patient Portal",
+        "lastUpdated": "March 9, 2026"
+      },
+      {
+        "userId": "USR002",
+        "name": "Dr. Emily Hartwell",
+        "email": "emily.hartwell@saintcys.org",
+        "role": "Doctor",
+        "status": "Active",
+        "department": "Cardiology",
+        "lastUpdated": "March 9, 2026"
+      },
+      {
+        "userId": "USR003",
+        "name": "Alicia Monroe",
+        "email": "alicia.monroe@saintcys.org",
+        "role": "Admin",
+        "status": "Active",
+        "department": "Administration",
+        "lastUpdated": "March 9, 2026"
+      },
+      {
+        "userId": "USR004",
+        "name": "Tyler Benson",
+        "email": "tyler.benson@saintcys.org",
+        "role": "Billing",
+        "status": "Pending",
+        "department": "Revenue Cycle",
+        "lastUpdated": "March 9, 2026"
+      },
+      {
+        "userId": "USR005",
+        "name": "Sofia Kim",
+        "email": "sofia.kim@saintcys.org",
+        "role": "Pharmacist",
+        "status": "Active",
+        "department": "Pharmacy",
+        "lastUpdated": "March 8, 2026"
+      },
+      {
+        "userId": "USR006",
+        "name": "Marcus Lee",
+        "email": "marcus.lee@saintcys.org",
+        "role": "Nurse",
+        "status": "Suspended",
+        "department": "ICU",
+        "lastUpdated": "March 8, 2026"
+      }
+    ]
+  },
+  "faqPage": {
+    "highlights": [
+      {
+        "icon": "bi-calendar2-check",
+        "title": "Appointments",
+        "description": "Get quick answers about booking, rescheduling, and arriving for your visit."
+      },
+      {
+        "icon": "bi-person-badge",
+        "title": "Accounts and Access",
+        "description": "Understand login issues, role permissions, and account approval steps."
+      },
+      {
+        "icon": "bi-capsule",
+        "title": "Prescriptions",
+        "description": "Review refill timelines, pharmacy access rules, and medication questions."
+      }
+    ],
+    "categories": [
+      "Appointments",
+      "Patient Portal",
+      "Doctors",
+      "Administration",
+      "Billing",
+      "Pharmacy"
+    ],
+    "items": [
+      {
+        "category": "Appointments",
+        "question": "How do I book or reschedule an appointment?",
+        "answer": "Patients can use the dashboard to view upcoming appointments and contact the appropriate department for changes. If you need a same-day change, call the front desk listed for your clinic."
+      },
+      {
+        "category": "Appointments",
+        "question": "What should I bring to an in-person visit?",
+        "answer": "Bring a photo ID, your insurance card, a current medication list, and any recent test documents you want the care team to review."
+      },
+      {
+        "category": "Patient Portal",
+        "question": "Why can I see my details but not edit everything permanently?",
+        "answer": "This course project supports in-browser updates for demonstration. Permanent profile changes would normally require a connected backend and secure account storage."
+      },
+      {
+        "category": "Patient Portal",
+        "question": "How do I recover access if I forget my password?",
+        "answer": "Use the account recovery option on the sign-in screen or contact the patient support desk for identity verification and a password reset."
+      },
+      {
+        "category": "Doctors",
+        "question": "Can doctors manage prescriptions from their dashboard?",
+        "answer": "Yes. The doctor dashboard includes a prescription queue so providers can review refill requests and medication actions for their assigned patients."
+      },
+      {
+        "category": "Doctors",
+        "question": "Why are some doctor schedule items marked with different statuses?",
+        "answer": "Statuses help providers prioritize work. For example, Checked In means the patient is ready, while Next Up or Later Today helps sequence the remaining shift."
+      },
+      {
+        "category": "Administration",
+        "question": "What can an admin do on the management page?",
+        "answer": "Admins can create user accounts, update roles, suspend or reactivate users, and approve access-related requests from hospital staff."
+      },
+      {
+        "category": "Administration",
+        "question": "Do role changes save permanently?",
+        "answer": "In this project, role and status updates are handled in the browser for demonstration. In a production system, those actions would persist through a secure database and audit trail."
+      },
+      {
+        "category": "Billing",
+        "question": "Where can I ask about insurance or billing issues?",
+        "answer": "Use the billing support channel listed below. Have your patient ID, visit date, and insurance information ready so the team can help faster."
+      },
+      {
+        "category": "Pharmacy",
+        "question": "Which medications require provider approval?",
+        "answer": "Prescription medications and controlled substances require provider authorization. Over-the-counter items may remain visible without approval requirements."
+      },
+      {
+        "category": "Pharmacy",
+        "question": "How long do refill requests usually take?",
+        "answer": "Routine refill requests are typically reviewed within one business day, while controlled or specialty medications may require additional confirmation from the care team."
+      }
+    ],
+    "supportOptions": [
+      {
+        "channel": "Patient Support",
+        "icon": "bi-headset",
+        "title": "Portal and Appointment Help",
+        "description": "Use this line for scheduling help, patient portal access, and visit preparation questions.",
+        "contact": "(555) 555-5555",
+        "hours": "Available Monday through Friday, 8:00 AM to 8:00 PM"
+      },
+      {
+        "channel": "Admin Desk",
+        "icon": "bi-shield-lock",
+        "title": "Staff Access and Role Requests",
+        "description": "Reach the admin team for account unlocks, staffing access, and permission updates.",
+        "contact": "(555) 555-5555",
+        "hours": "Available Monday through Friday, 8:00 AM to 8:00 PM"
+      },
+      {
+        "channel": "Pharmacy",
+        "icon": "bi-capsule-pill",
+        "title": "Medication and Refill Questions",
+        "description": "Contact the pharmacy desk for refill timing, medication availability, and pickup questions.",
+        "contact": "(555) 555-5555",
+        "hours": "Available daily, 8:00 AM to 8:00 PM"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "author_id": "AUTH001",
+      "name": "Neal Sharma",
+      "email": "nea1@iastate.edu",
+      "role": "Member 1",
+      "year": "Sophomore",
+      "major": "Computer Science",
+      "photo": "neal.jpg",
+      "bio": "Sophomore CS student at Iowa State. Built the Saint Cy's mobile app with Devank and now working on the web version. Enjoys solving hard problems and has experience across the full stack."
+    },
+    {
+      "author_id": "AUTH002",
+      "name": "Devank Uppal",
+      "email": "duppal@iastate.edu",
+      "role": "Member 2",
+      "year": "Junior",
+      "major": "Computer Science",
+      "photo": "devank.jpg",
+      "bio": "Junior CS student at Iowa State. Co-built the Saint Cy's mobile app and is now bringing that same experience to the web version. Works well in teams and has a solid background in full-stack development."
+    }
+  ]
+}

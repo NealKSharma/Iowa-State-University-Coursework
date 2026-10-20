@@ -1,0 +1,6 @@
+3
+City1
+City2
+City3
+0
+0

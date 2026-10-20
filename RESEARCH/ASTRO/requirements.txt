@@ -1,0 +1,8 @@
+setuptools
+astropy==5.3.4
+astroquery>=0.4
+matplotlib
+numpy
+scipy
+lightkurve
+ipympl

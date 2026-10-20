@@ -1,0 +1,32 @@
+/* technology.css */
+.tech-banner {
+  background-color: #202020;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.tech-card-image {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.tech-card-image img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+.tech-price {
+  color: #c8102e;
+  font-weight: 700;
+  font-size: 1.05rem;
+}

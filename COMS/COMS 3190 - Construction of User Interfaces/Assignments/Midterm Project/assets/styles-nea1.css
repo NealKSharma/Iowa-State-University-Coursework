@@ -1,0 +1,459 @@
+/* styles-nea1.css — Neal Sharma | SE/COM S 3190 · Spring 2026 · AH17 */
+
+:root {
+  --red:    #C41230;
+  --dark:   #8B0000;
+  --gray:   #6b7280;
+  --border: #e5d5d8;
+  --serif:  'Playfair Display', Georgia, serif;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #fafafa;
+  margin: 0;
+}
+
+/* Navbar */
+.sc-navbar {
+  background: var(--red);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.sc-brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.sc-navbar .nav-link {
+  color: rgba(255,255,255,0.8) !important;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.sc-navbar .nav-link:hover,
+.sc-navbar .nav-link.active {
+  color: #fff !important;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Footer */
+.sc-footer {
+  background: #1a1a1a;
+  color: rgba(255,255,255,0.5);
+  padding: 1.25rem 0;
+  font-size: 0.8rem;
+}
+
+/* Hero */
+.sc-hero {
+  background: linear-gradient(135deg, var(--red), var(--dark));
+  color: #fff;
+  padding: 5rem 0 4rem;
+}
+
+.sc-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 0.5rem;
+}
+
+.sc-hero-title {
+  font-family: var(--serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.sc-title-accent {
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+}
+
+.sc-hero-sub {
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+}
+
+.sc-hero-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Buttons */
+.sc-btn-primary {
+  background: #fff;
+  color: var(--red);
+  font-weight: 700;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Stats */
+.sc-stats-strip {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 1.75rem 0;
+}
+
+.sc-stat-item {
+  border-right: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+}
+
+.sc-stat-item:last-child {
+  border-right: none;
+}
+
+.sc-stat-number {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.sc-stat-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* Section headings */
+.sc-section-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sc-section-sub {
+  color: var(--gray);
+  font-size: 0.93rem;
+}
+
+/* Role cards */
+.sc-roles {
+  background: #f4f4f4;
+}
+
+.sc-role-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+.sc-role-card:hover {
+  border-color: var(--red);
+  box-shadow: 0 4px 20px rgba(196,18,48,0.1);
+  transform: translateY(-2px);
+}
+
+.sc-role-icon {
+  font-size: 2rem;
+  color: var(--red);
+  margin-bottom: 0.75rem;
+}
+
+.sc-role-link {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+/* Feature cards */
+.sc-features {
+  background: #fff;
+}
+
+.sc-feature-card {
+  border-left: 3px solid var(--red);
+  padding: 1.25rem;
+  height: 100%;
+  background: #fafafa;
+}
+
+.sc-feature-icon {
+  font-size: 1.4rem;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+/* Page header */
+.sc-page-header {
+  background: linear-gradient(135deg, #C41230, #8B0000);
+  color: #fff;
+  padding: 2.75rem 0 2.25rem;
+}
+
+.sc-page-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.sc-page-header p {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Divider */
+.sc-divider {
+  border-color: #e5d5d8;
+  margin: 0;
+}
+
+/* Badge */
+.sc-badge {
+  display: inline-block;
+  background: #f9e8ec;
+  color: #8B0000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+}
+
+/* Appointment cards */
+.sc-appt-card {
+  background: #fff;
+  border: 1px solid #e5d5d8;
+  border-radius: 6px;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.sc-appt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.sc-appt-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+}
+
+.status-upcoming { background: #e8f5e9; color: #2e7d32; }
+.status-past { background: #f4f4f4; color: #6b7280; }
+
+.sc-appt-doctor {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.sc-appt-date,
+.sc-appt-time {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.sc-appt-desc {
+  font-size: 0.84rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* Medication cards */
+.sc-med-card {
+  background: #fff;
+  border: 1px solid #e5d5d8;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.sc-med-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.sc-med-body { padding: 1rem; }
+
+.sc-med-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.sc-med-desc {
+  font-size: 0.82rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.sc-med-access {
+  font-size: 0.75rem;
+  color: #C41230;
+  font-weight: 700;
+}
+
+/* Details card */
+.sc-details-card {
+  background: #fff;
+  border: 1px solid #e5d5d8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.sc-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid #e5d5d8;
+}
+
+.sc-detail-row:last-child { border-bottom: none; }
+
+.sc-detail-label {
+  font-size: 0.82rem;
+  color: #6b7280;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sc-detail-value {
+  font-size: 0.88rem;
+  color: #1a1a1a;
+}
+
+/* Editable details */
+.sc-detail-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sc-detail-input {
+  font-size: 0.88rem;
+  border: 1px solid #e5d5d8;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  color: #1a1a1a;
+  outline: none;
+}
+
+.sc-detail-input:focus {
+  border-color: #C41230;
+}
+
+.sc-edit-btn {
+  background: none;
+  border: none;
+  color: #C41230;
+  cursor: pointer;
+  font-size: 0.82rem;
+  padding: 0;
+}
+
+.sc-save-btn {
+  background: #C41230;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+}
+
+.sc-save-btn:hover {
+  background: #8B0000;
+}
+
+/* Author cards */
+.sc-author-card {
+  background: #fff;
+  border: 1px solid #e5d5d8;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.sc-author-photo {
+  width: 100%;
+  height: 500px;
+  background: #f9e8ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sc-author-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sc-author-info {
+  padding: 1.5rem;
+}
+
+.sc-author-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.sc-author-meta-line {
+  font-size: 0.82rem;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+}
+
+.sc-author-email {
+  display: inline-block;
+  color: #C41230;
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 0.9rem;
+}
+
+.sc-author-email:hover {
+  text-decoration: underline;
+}
+
+.sc-author-bio {
+  font-size: 0.88rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.sc-author-course {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin: 0;
+}

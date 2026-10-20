@@ -1,0 +1,16 @@
+January 26, 2026: 
+- Initialized the directory. Downloaded gcc and make.
+- Setup main and the added populate_board and draw_board methods to initialize and view the board.
+- Created the tour method to take in only x and y as paramaters and print out the path for that certain starting point.
+- For the tour method, I had a basic approach of +-2 for x and y without any step counter.
+- The current approach only returned one path. It did not yet include backtracking (I realise this mistake the next day.)
+- Created CHANGELOGS and Makefile.
+
+January 27, 2026:
+- Went to TA help hours and this is when I found out I had to print all 1728 tours and not just 1.
+- Added loops to go through all the different starting points on the 5x5 grid.
+- Updated the tour method to keep a track on steps.
+- Added backtracking by storing the board[x][y] in a temp value and then setting it back after the knight's movement
+- Used the recursive approach for tour.
+- Added a counter to display the total number of tours.
+- Updated Makefile to include -g flag and clean rule for pyrite compatibility.

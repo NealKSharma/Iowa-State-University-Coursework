@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: #D2B48C;
+    margin: 0;
+    color: #221811;
+    font-family: Tahoma, sans-serif, Arial;
+}
+#wrapper{
+    background-color: #231814;
+    padding: 0;
+}
+header{
+    background-color: #D2b48c;
+    background-image: url(images/cup.jpg);
+    background-repeat: no-repeat;
+    color: #231814;
+    padding-left: 105px;
+    height: 128px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+header a{
+    text-decoration: none;
+}
+header a:link{
+    color: #231814;
+}
+header a:visited{
+    color: #231814;
+}
+header a:hover{
+    color: #fef6c2;
+}
+h1{
+    font-size: 2em;
+}
+h2, h3, dt{
+    color: #8c3826;
+}
+h4{
+    background-color: #D2b48c;
+    font-size: 1.2em;
+    padding-left: .5cm;
+    padding-bottom: 0cm;
+    text-transform: uppercase;
+    border-bottom: 1px solid #221811;
+    clear: left;
+}
+nav{
+    text-align: center;
+    font-size: 1.5em;;
+}
+nav a{
+    text-decoration: none;
+}
+nav a:link{
+    color: #fef6c2;
+}
+nav a:visited{
+    color: #D2b48c;
+}
+nav a:hover{
+    color: #cc9933;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25em;
+}
+nav li{
+    padding: .5em 1em;
+    width: 100%;
+    border-bottom: 1px solid #fef6c2;
+}
+main{
+    background-color: #fef6c2;
+    display: block;
+    padding: 0 0 2em 0;
+}
+h2,h3,h4,p,div,ul,dl{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+main {
+    padding-left: 2em;
+}
+.details{
+    padding-left: 20%;
+    padding-right: 20%;
+    overflow: auto;
+}
+img {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#homehero{
+    height: 300px;
+    background-image: url(images/road.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#heromugs{
+    height: 300px;
+    background-image: url(images/threemugs.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#heroguitar{
+    height: 300px;
+    background-image: url(images/guitar.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#herojobs{
+    height: 300px;
+    background-image: url(images/coffeecup.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#herocouch{
+    height: 300px;
+    background-image: url(images/herocouch.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#mobile{ display: inline;}
+#desktop {display: none;}
+
+footer{
+    background-color: #D2b48c;
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 1em;
+    border-top: 2px solid #8c3826;;
+}
+table{
+    margin: auto;
+    width: 90%;
+    border-spacing: 0;
+}
+th, td {
+    padding: 10px;
+}
+tr:nth-of-type(odd){
+    background-color: #d2b48c;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+input, textarea { margin-bottom: .5em; }
+audio {
+    display: block;
+    margin-top: 1em;
+}
+.item {
+    background-color: #faf9f7;
+    margin: 1em;
+    padding: 1em;
+    overflow: auto;
+}
+.item img{
+    float: right;
+}
+
+@media (min-width: 600px){
+    header{
+        padding-left: 0;
+        text-align: center;
+    }
+    h1{font-size: 3em; }
+    nav ul{
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    nav li{border-bottom: none;}
+    #homehero{
+        background-image: url(images/hero.jpg);
+        height: 50vh;
+    }
+    #heromugs{ background-image: url(images/heromugs.jpg);}
+    #heroguitar { background-image: url(images/heroguitar.jpg);}
+    #flow {
+        display: flex;
+        flex-direction: row;
+    }
+    #mobile{ display: none;}
+    #desktop { display: inline;}
+
+    .details{
+        display: flex;
+        flex-direction: row;
+    }
+    h4{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    form {
+        width: 40%;
+        display: grid;
+        grid-gap: 1em; gap: 1em;
+        grid-template-columns: 6em 1fr;
+    }
+    input [type = "submit"] {
+        grid-column: 2 / 3;
+        width: 9em;
+    }
+    #herojobs {
+        background-image: url(images/herojobs.jpg);
+    }
+}
+
+@media (min-width: 1024px){
+    @supports (display: grid){
+        header{ grid-area: header; }
+        nav { grid-area: nav; }
+        main { grid-area: main; }
+        footer{ grid-area: footer; }
+
+        #wrapper { display: grid;
+            grid-template:
+                 "header header"
+                 "nav   main"
+                 "footer   footer"
+                 / 200px; 
+                }
+        nav ul{
+            flex-direction: column;
+        }
+        header{
+            background-color: #D2b48c;
+            background-image: url(images/coffeelogo.jpg);
+            background-repeat: no-repeat;
+        }
+    }
+}

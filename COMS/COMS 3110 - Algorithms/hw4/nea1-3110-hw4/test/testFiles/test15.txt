@@ -1,0 +1,25 @@
+10
+Alpha
+Beta
+Gamma
+Delta
+Epsilon
+Zeta
+Eta
+Theta
+Iota
+Kappa
+5
+Alpha Beta
+Beta Gamma
+Delta Epsilon
+Epsilon Zeta
+Eta Theta
+7
+Alpha Delta
+Delta Gamma
+Zeta Eta
+Eta Iota
+Iota Kappa
+Kappa Alpha
+Theta Alpha

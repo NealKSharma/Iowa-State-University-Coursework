@@ -1,0 +1,10 @@
+4
+Des_Moines
+Ankeny
+Ames
+Nineveh
+2
+Des_Moines Ankeny
+Ames Ankeny
+1
+Nineveh Ames

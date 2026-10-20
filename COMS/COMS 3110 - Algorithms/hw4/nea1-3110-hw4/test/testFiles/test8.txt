@@ -1,0 +1,7 @@
+2
+CityA
+CityB
+0
+2
+CityA CityB
+CityB CityA

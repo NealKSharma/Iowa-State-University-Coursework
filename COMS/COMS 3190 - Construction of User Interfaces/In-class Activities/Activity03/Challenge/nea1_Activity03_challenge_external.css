@@ -1,0 +1,22 @@
+.container {
+    background-color: lightgray;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    color: orange;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: darkblue;
+    text-align: left;
+}
+
+p {
+    font-size: 16px;
+    color: darkgray;
+    text-align: left;
+}
